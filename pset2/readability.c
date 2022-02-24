@@ -38,9 +38,9 @@ int count_letters(string s)
 {
     int letter_amount = 0;
     //Go through each letter in the string to check if a letter is alphabetic. (if it is alphabetic it adds to count)
-    for (int i = 0, n = strln(s); i < n; i++)
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if (isalpha(s[i]))
+        if (isalnum(s[i]))
         {
             letter_amount++;
         }
@@ -52,7 +52,7 @@ int count_words(string s)
 {
     // When space is found add 1 to word count (since words are divided by spaces)
     int words_amount = 1;
-    for (int i = 0, n = strln(s); i < n; i++)
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
         if (isspace(s[i]))
         {
@@ -69,7 +69,7 @@ int count_sentences(string s)
     int sentences_amount = 0;
 
     //Loop to go through letters
-    for (int i = 0, n = strln(s); i < n; i++)
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
         //Loop to go through array
         for (int j = 0; j < 3; j++)
